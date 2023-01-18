@@ -1,4 +1,4 @@
-function loadJoke() {
+const loadJoke = () => {
   fetch(
     "https://v2.jokeapi.dev/joke/Any?blacklistFlags=racist,sexist&type=single&idRange=0-319"
   ) // Fetching a joke generator API
@@ -7,7 +7,7 @@ function loadJoke() {
     .catch(
       () => (document.getElementById("joke").innerText = "Please try again..") // Catching an error
     );
-}
+};
 
 loadJoke();
 
